@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body, html {
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    padding: 0;
+    text-align: center;
+}
+
+/* Navegación */
+
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+li a:hover{
+    background: white;
+    transition: 0.6s;
+}
+.navbar a:hover{
+    color: black;
+}
+h1 {
+   color: white;
+}
+h3 {
+    color: white;
+    text-align: left;
+}
+p {
+    color: white;
+}
+
+/* Sección de contacto */
+main {
+    flex: 1;
+    background-size: cover;
+    width: 100vw;
+}
+
+form {
+    width: 20%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label, form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%; /* Para hacer los iconos redondos */
+    padding: 10px;
+    transition: background-color 0.3s; /* Transición para el hover */
+  }
+  .redes-sociales img {
+    width: 40px; /* Ajusta el ancho de las imágenes */
+    height: 40px; /* Ajusta la altura de las imágenes */
+    border-radius: 50%; /* Para hacer las imágenes redondas */
+  }
+  
+  .redes-sociales a:hover {
+    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+  }
+

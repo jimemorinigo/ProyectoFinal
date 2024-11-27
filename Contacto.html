@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/icons8-favourite-website-48.png">
+    <link rel="stylesheet" href="contacto.css">
+    <title>Descubre la Magia</title>
+   
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="Imagenes/logo.png">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <h1>Formulario de contacto</h1>
+    </header>
+    
+    
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form onsubmit="return submitForm();">
+        <label for="fname">Nombre:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+        <label for="lname">Apellido:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        function submitForm() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Enviamos los datos a confirmacion.html a través de URL
+            window.location.href = `confirmacion.html?fname=${fname}&lname=${lname}&email=${email}&message=${message}`;
+
+            // Evitamos el envío del formulario por defecto
+            return false;
+        }
+    </script>
+        
+    <div style="text-align: center;">
+    <a href="https://wa.me/+5491159545781" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">WhatsApp</a>
+    </div>
+    
+ 
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com"  target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"  target="_blank"  class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com"  target="_blank"  class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
+          </div>
+        <p>Derechos Reservados @2024</p>
+    </footer>
+    
+</body>
+</html>

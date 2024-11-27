@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/icons8-favourite-website-48.png">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="Confirmacion.css">
+    
+    <title>Descubre la Magia</title>
+   
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="Imagenes/logo.png">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+            
+        </div>
+        <h1>Formulario de contacto</h1>
+        <table border="1" >
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Mensaje</th>
+            </tr>
+            <script>
+                // Recibimos los datos del formulario a través de la URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const fname = urlParams.get('fname');
+                const lname = urlParams.get('lname');
+                const email = urlParams.get('email');
+                const message = urlParams.get('message');
+    
+                // Mostramos los datos en la tabla
+                document.write(`<tr><td>${fname}</td><td>${lname}</td><td>${email}</td><td>${message}</td></tr>`);
+            </script>
+        </table>
+        <div class="cont">
+            <p>¡Gracias por contactarnos! Apreciamos tu consulta. Para brindarte una respuesta rápida, nuestro equipo se pondrá en contacto contigo en breve. ¡Esperamos poder ayudarte pronto!</p>
+        </div>
+        <script>
+            setTimeout(function() {
+    window.location.href = "index.html"; // Cambiar "otra_pagina.html" por la URL deseada
+}, 20000);
+        </script>
+    </header>
+    
+    
+
+ 
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com"  target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"  target="_blank"  class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com"  target="_blank"  class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
+          </div>
+        <p>Derechos Reservados @2024</p>
+    </footer>
+    
+</body>
+</html>

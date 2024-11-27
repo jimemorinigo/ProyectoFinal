@@ -1,0 +1,62 @@
+table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #555;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cont{
+    width: 500px; /* Ancho del div */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+p {
+    
+    font-size: 16px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    text-align: center justify; /* Alineación del texto */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    
+  }
+
+  footer {
+   
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%; /* Para hacer los iconos redondos */
+    padding: 10px;
+    transition: background-color 0.3s; /* Transición para el hover */
+  }
+  .redes-sociales img {
+    width: 40px; /* Ajusta el ancho de las imágenes */
+    height: 40px; /* Ajusta la altura de las imágenes */
+    border-radius: 50%; /* Para hacer las imágenes redondas */
+  }
+  
+  .redes-sociales a:hover {
+    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+  }
+  

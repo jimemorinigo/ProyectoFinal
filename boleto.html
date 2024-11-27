@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/icons8-favourite-website-48.png">
+    <link rel="stylesheet" href="reserva1.css">
+    <link rel="stylesheet" href="boleto.css">
+    <title>Descubre la Magia</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="Imagenes/logo.png">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h3>¡Tu Boleto de Viaje!</h3>
+        
+        <div class="ticket" id="boleto">
+            <p><span class="bold">Nombre:</span></p>
+            <p><span class="bold">Destino:</span></p>
+            <p><span class="bold">Fecha:</span></p>
+            <p><span class="bold">Personas:</span></p>
+            
+            <div class="ticket-info">
+                <p>Por favor, presenta este boleto en el mostrador de check-in.</p>
+            </div>
+        </div>
+
+        <div class="button">
+            <button onclick="imprimirBoleto()">Imprimir Boleto</button>
+        </div>
+    </div>
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com"  target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"  target="_blank"  class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com"  target="_blank"  class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
+          </div>
+        <p>Derechos Reservados @2024</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombre = urlParams.get('nombre');
+    const email = urlParams.get('email');
+    const fecha = urlParams.get('fecha');
+    const personas = urlParams.get('personas');
+
+    const boletoDiv = document.getElementById('boleto');
+    const ticketInfo = `
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Fecha de viaje:</strong> ${fecha}</p>
+        <p><strong>Número de personas:</strong> ${personas}</p>
+    `;
+
+    boletoDiv.innerHTML = `
+        ${ticketInfo}
+    `;
+});
+
+function imprimirBoleto() {
+        window.print();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+.content {
+    display: flex;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container h2 {
+    color: #333333;
+}
+
+.container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar{
+    background-color: black;
+    width: 100%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+li a:hover{
+    background: white;
+    transition: 0.6s;
+}
+.navbar a:hover{
+    color: black;
+}
+
+/* Estilos para la sección de información */
+.info {
+    text-align: left;
+    width: 70%;
+    padding: 20px 0;
+    margin-left: 5px;
+}
+
+.info h2, .info h3 {
+    color: #333333;
+}
+
+/* Estilos para la sección de reserva */
+.reserva {
+    
+    width: 30%;
+    padding: 20px 0;
+    margin-right: 5px;
+    
+}
+
+.reserva form {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.reserva form input[type="text"],
+.reserva form input[type="email"],
+.reserva form input[type="date"],
+.reserva form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.reserva form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%; /* Para hacer los iconos redondos */
+    padding: 10px;
+    transition: background-color 0.3s; /* Transición para el hover */
+  }
+  .redes-sociales img {
+    width: 40px; /* Ajusta el ancho de las imágenes */
+    height: 40px; /* Ajusta la altura de las imágenes */
+    border-radius: 50%; /* Para hacer las imágenes redondas */
+  }
+  
+  .redes-sociales a:hover {
+    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+  }
+
