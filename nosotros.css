@@ -1,6 +1,6 @@
 *{
-    background-color: #000;
-    color: #fff; /* Esto hará que el texto sea blanco */
+    background-color: #F8E6CF;
+    color: #7B3F00; /* Esto hará que el texto sea blanco */
     margin: 0;
     padding: 0;
     
@@ -33,20 +33,20 @@
 .navbar ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff; /* Esto hará que el texto del enlace sea blanco */
+    color: #7B3F00; /* Esto hará que el texto del enlace sea blanco */
     font-weight: 600;
     padding: 15px;
 }
 li a:hover{
     background: #fff;
     transition: 0.6s;
-    color: #000; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
+    color: #7B3F00; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
 }
 .navbar a:hover{
-    color: black; /* Esto hará que el texto del enlace sea blanco cuando se pase el mouse por encima */
+    color: #7B3F00; /* Esto hará que el texto del enlace sea blanco cuando se pase el mouse por encima */
 }
 .about-us {
-    background-color: #000;
+    background-color: #F8E6CF;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -84,7 +84,7 @@ li a:hover{
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #fff;
-    color: #000;
+    color: #7B3F00;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.5s ease;
@@ -104,7 +104,7 @@ p {
 }
 
 footer p {
-    color: white;
+    color: #7B3F00;
     padding: 10px;
     text-align: center;
     
@@ -129,5 +129,5 @@ footer p {
   }
   
   .redes-sociales a:hover {
-    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+    background-color: #ccc; /* Cambiar el color de fondo en hover */
   }
