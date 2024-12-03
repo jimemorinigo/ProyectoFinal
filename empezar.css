@@ -1,6 +1,6 @@
 *{
-    background-color: #000;
-    color: #fff; /* Esto hará que el texto sea blanco */
+    background-color: #F8E6CF;
+    color: #7B3F00; /* Esto hará que el texto sea blanco */
     margin: 0;
     padding: 0;
     
@@ -34,14 +34,14 @@
 .navbar ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff; /* Esto hará que el texto del enlace sea blanco */
+    color: #7B3F00; /* Esto hará que el texto del enlace sea blanco */
     font-weight: 600;
     padding: 15px;
 }
 li a:hover{
-    background: #fff;
+    background: #DCA77A ;
     transition: 0.6s;
-    color: #000; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
+    color: #7B3F00; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
 }
 .navbar a:hover{
     color: black; /* Esto hará que el texto del enlace sea blanco cuando se pase el mouse por encima */
@@ -49,18 +49,19 @@ li a:hover{
 .content{
     width: 100%;
     position: absolute;
-    color: #fff;
+    color: #7B3F00;
     top: 45%;
     transform: translateY(-50%);
     text-align: center;
 }
 .body{
-    background-color: #000;
+    background-color: #F8E6CF;
 	width: 100%;
 	height: auto;
-    
+    flex-wrap: wrap;
+    gap: 20px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;;
 	align-items: center;
 	background-position: center;
 	background-size: cover;
@@ -69,6 +70,8 @@ img {
     border-radius: 15px; /* Esto hará que los bordes de la imagen sean redondeados */
     transform: scale(1.03); /* Esto hará que la imagen parezca un poco más grande, dando la impresión de que sobresale de la pantalla */
     transition: transform 0.3s ease-in-out; /* Esto hará que la imagen crezca suavemente */
+    max-width: 100%;
+    height: auto;
 }
  img:hover {
     transform: scale(1.08); /* Esto hará que la imagen crezca un poco cuando pases el mouse por encima */
@@ -78,14 +81,14 @@ img {
 .heading{
 	width: 30%;
 	text-align: center;
-	color: #fff;
+	color: #7B3F00;
 }
 .heading h1{
 	font-size: 40px;
 }
 .heading a{
 	text-decoration: none;
-	color: #fff; /* Esto hará que el texto del enlace sea blanco */
+	color: #7B3F00; /* Esto hará que el texto del enlace sea blanco */
 	font-size: 25px;
 	font-weight: bold;
 	border-radius: 45px;
@@ -108,14 +111,16 @@ img {
 	display: inline;
 	text-align: center;
 	border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .places h2{
-	color: #fff; /* Esto hará que el texto del encabezado sea blanco */
+	color: #7B3F00; /* Esto hará que el texto del encabezado sea marron */
 	font-size: 35px;
 	letter-spacing: 3px;
 	border-radius: 1px;
 	padding: 30px 30px;
-	background-color: #000; /* Esto hará que el fondo del encabezado sea negro */
+	background-color: #F8E6CF; /* Esto hará que el fondo del encabezado sea beige */
 }
 .places .res{
 	text-decoration: none;
@@ -124,13 +129,13 @@ img {
 	font-size: 18px;
 	border-radius: 12px;
 	padding: 12px 30px;
-	background-color: #000; /* Esto hará que el fondo del enlace sea negro */
+	background-color: #2C3E50                            ; /* Esto hará que el fondo del enlace sea negro */
 }
 .places a:hover{
 	background-color: #fff; /* Esto hará que el fondo del enlace sea blanco cuando se pase el mouse por encima */
 	letter-spacing: 3px;
 	transition: 0.6s;
-	color: #000; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
+	color: #2C3E50 ; /* Esto hará que el texto del enlace sea negro cuando se pase el mouse por encima */
 }
 footer {
     color: white;
@@ -152,5 +157,5 @@ footer {
   }
   
   .redes-sociales a:hover {
-    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+    background-color: #ccc; /* Cambiar el color de fondo en hover */
   }
