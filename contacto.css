@@ -24,7 +24,7 @@ body {
 }
 
 header, main, footer {
-    padding: 0;
+    padding: 0; 
     text-align: center;
 }
 
@@ -51,26 +51,28 @@ header, main, footer {
 .navbar ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: #7B3F00;
     font-weight: 600;
     padding: 15px;
 }
 li a:hover{
-    background: white;
+    background: #DCA77A;
     transition: 0.6s;
 }
 .navbar a:hover{
-    color: black;
+    color: #7B3F00;
 }
 h1 {
-   color: white;
+   color: #7B3F00;
+   font-size: 50px;
+   
 }
 h3 {
-    color: white;
+    color: #7B3F00;
     text-align: left;
 }
 p {
-    color: white;
+    color: #7B3F00;
 }
 
 /* Sección de contacto */
@@ -108,12 +110,25 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #348138;
+}
+
+.whatsapp-button {
+    background-color: #4CAF50; /* Verde original de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Animación suave */
+}
+.whatsapp-button:hover {
+    background-color: #348138; /* Un verde más oscuro */
 }
 
 /* Footer */
 footer {
-    color: white;
+    color: #7B3F00;
     padding: 10px;
     text-align: center;
 }
@@ -131,6 +146,6 @@ footer {
   }
   
   .redes-sociales a:hover {
-    background-color: #e540eb; /* Cambiar el color de fondo en hover */
+    background-color: #ccc; /* Cambiar el color de fondo en hover */
   }
 
