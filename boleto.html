@@ -20,7 +20,7 @@
         </div>
     </header>
     <div class="container">
-        <h3>¡Tu Boleto de Viaje!</h3>
+        <h3>comprobante</h3>
         
         <div class="ticket" id="boleto">
             <p><span class="bold">Nombre:</span></p>
@@ -29,12 +29,12 @@
             <p><span class="bold">Personas:</span></p>
             
             <div class="ticket-info">
-                <p>Por favor, presenta este boleto en el mostrador de check-in.</p>
+                <p>Por favor, presenta este comprobante en el mostrador.</p>
             </div>
         </div>
 
         <div class="button">
-            <button onclick="imprimirBoleto()">Imprimir Boleto</button>
+            <button onclick="imprimirComprobante()">Imprimir comprobante</button>
         </div>
     </div>
     <footer>
@@ -57,8 +57,8 @@
     const ticketInfo = `
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Fecha de viaje:</strong> ${fecha}</p>
-        <p><strong>Número de personas:</strong> ${personas}</p>
+        <p><strong>Fecha de pedido:</strong> ${fecha}</p>
+        <p><strong>cantidad:</strong> ${personas}</p>
     `;
 
     boletoDiv.innerHTML = `
