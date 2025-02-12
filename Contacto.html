@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Imagenes/deco9.png">
     <link rel="stylesheet" href="contacto.css">
-    <title>Helados Artesanales</title>
-   
+    <title>Login</title>
 </head>
 <body>
     <header>
@@ -15,54 +14,55 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Contacto.html">Login</a></li>
             </ul>
         </div>
-        <h1>Formulario de contacto</h1>
+        <h1>Login</h1>
     </header>
     
-    
-</head>
-<body>
     <form onsubmit="return submitForm();">
-        <label for="fname">Nombre:</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">Apellido:</label><br>
-        <input type="text" id="lname" name="lname" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message" required></textarea><br>
-        <input type="submit" value="Enviar">
+        <label for="username">Usuario:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="role">Rol:</label><br>
+        <select id="role" name="role" required>
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+        </select><br>
+        <input type="submit" value="Login">
     </form>
+    
     <script>
         function submitForm() {
-            var fname = document.getElementById("fname").value;
-            var lname = document.getElementById("lname").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var role = document.getElementById("role").value;
 
-            // Enviamos los datos a confirmacion.html a través de URL
-            window.location.href = `confirmacion.html?fname=${fname}&lname=${lname}&email=${email}&message=${message}`;
+            // Aquí puedes agregar la lógica de autenticación
+            // Por ahora, redirigimos según el rol
+            if (role === "admin") {
+                window.location.href = `admin_dashboard.html?username=${username}`;
+            } else {
+                window.location.href = `user_dashboard.html?username=${username}`;
+            }
 
             // Evitamos el envío del formulario por defecto
             return false;
         }
     </script>
-        
+    
     <div style="text-align: center;">
-    <a href="https://wa.me/+5491133615487" class="whatsapp-button" >WhatsApp</a>
+        <a href="https://wa.me/+5491133615487" class="whatsapp-button">WhatsApp</a>
     </div>
     
- 
     <footer>
         <div class="redes-sociales">
-            <a href="https://www.facebook.com"  target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
-            <a href="https://www.twitter.com"  target="_blank"  class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com"  target="_blank"  class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
-          </div>
+            <a href="https://www.facebook.com" target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
+        </div>
         <p>Derechos Reservados @2024</p>
     </footer>
-    
 </body>
 </html>

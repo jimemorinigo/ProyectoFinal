@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Imagenes/deco9.png">
     <link rel="stylesheet" href="empezar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Helados Artesanales</title>
 </head>
 <body>
@@ -15,7 +13,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Contacto.html">login</a></li>
             </ul>
         </div>
     </header>
@@ -24,29 +22,35 @@
         <div class="body">
             <div class="places">
                 <h2>Helado de Vainilla</h2> 
-                <a href="reserva1.html">
+                <a href="#" onclick="addToCart('Helado de Vainilla')">
                     <img src="Imagenes/helado-vainilla.png" alt="Helado de Vainilla">
                 </a>
-                <a class="res" href="reserva1.html">Agregar al pedido</a>
+                <a class="res" href="#" onclick="addToCart('Helado de Vainilla')">Agregar al pedido</a>
             </div>
             <div class="tours">
                 <div class="places">
                     <h2>Helado de Chocolate</h2>
-                    <a href="reserva2.html">
+                    <a href="#" onclick="addToCart('Helado de Chocolate')">
                         <img src="Imagenes/helado-chocolate.png" alt="Helado de Chocolate">
                     </a>
-                    <a class="res" href="reserva2.html">Agregar al pedido</a>
+                    <a class="res" href="#" onclick="addToCart('Helado de Chocolate')">Agregar al pedido</a>
                 </div>
                 <div class="places">
                     <h2>Helado de Frutilla</h2>
-                    <a href="reserva3.html">
+                    <a href="#" onclick="addToCart('Helado de Frutilla')">
                         <img src="Imagenes/helado-frutilla.png" alt="Helado de Frutilla">
                     </a>
-                    <a class="res" href="reserva3.html">Agregar al pedido</a>
+                    <a class="res" href="#" onclick="addToCart('Helado de Frutilla')">Agregar al pedido</a>
                 </div>
             </div>
         </div>
     </main>
+
+    <div id="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Finalizar Pedido</button>
+    </div>
 
     <footer>
         <div class="redes-sociales">
@@ -56,5 +60,6 @@
         </div>
         <p>Derechos Reservados @2024</p>
     </footer>
+    <script src="empezar.js"></script>
 </body>
 </html>
