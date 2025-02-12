@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ff7043 100%);
+    padding: 20px;
+}
+
+h2 {
+    color: #37474f;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #ff7043;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background: #f4511e;
+}
+
+p {
+    margin-top: 1rem;
+    color: #666;
+}
+
+a {
+    color: #ff7043;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#mensaje {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+/* Container principal */
+.container > * {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Mensajes de éxito/error */
+#mensaje.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+#mensaje.error {
+    background: #ffebee;
+    color: #c62828;
+}

@@ -3,66 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Imagenes/deco9.png">
-    <link rel="stylesheet" href="contacto.css">
-    <title>Login</title>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <img class="logo" src="Imagenes/logo.png">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="Contacto.html">Login</a></li>
-            </ul>
+    <div class="container">
+        <div class="content">
+            <h2>Iniciar Sesión</h2>
+            <input 
+                type="email" 
+                id="login-email" 
+                placeholder="Correo electrónico"
+                autocomplete="email">
+            <input 
+                type="password" 
+                id="login-password" 
+                placeholder="Contraseña"
+                autocomplete="current-password">
+            <button onclick="login()">Iniciar Sesión</button>
+            <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            <div id="mensaje"></div>
         </div>
-        <h1>Login</h1>
-    </header>
-    
-    <form onsubmit="return submitForm();">
-        <label for="username">Usuario:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Contraseña:</label><br>
-        <input type="password" id="password" name="password" required><br>
-        <label for="role">Rol:</label><br>
-        <select id="role" name="role" required>
-            <option value="user">Usuario</option>
-            <option value="admin">Administrador</option>
-        </select><br>
-        <input type="submit" value="Login">
-    </form>
-    
+    </div>
+
     <script>
-        function submitForm() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            var role = document.getElementById("role").value;
+        let token = "";
+        async function login() {
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+            const mensajeDiv = document.getElementById("mensaje");
 
-            // Aquí puedes agregar la lógica de autenticación
-            // Por ahora, redirigimos según el rol
-            if (role === "admin") {
-                window.location.href = `admin_dashboard.html?username=${username}`;
-            } else {
-                window.location.href = `user_dashboard.html?username=${username}`;
+            try {
+                const response = await fetch("http://localhost:5000/api/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await response.json();
+
+                if (data.token) {
+                    token = data.token;
+                    localStorage.setItem("token", token);
+                    mensajeDiv.className = "success";
+                    mensajeDiv.innerText = "Inicio de sesión exitoso.";
+                    
+                    setTimeout(() => {
+                        window.location.href = "index.html";
+                    }, 1000);
+                } else {
+                    mensajeDiv.className = "error";
+                    mensajeDiv.innerText = "Error: " + data.error;
+                }
+            } catch (error) {
+                mensajeDiv.className = "error";
+                mensajeDiv.innerText = "Error de conexión: " + error.message;
             }
-
-            // Evitamos el envío del formulario por defecto
-            return false;
         }
     </script>
-    
-    <div style="text-align: center;">
-        <a href="https://wa.me/+5491133615487" class="whatsapp-button">WhatsApp</a>
-    </div>
-    
-    <footer>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com" target="_blank" class="icono-facebook"><img src="Imagenes/facebook_4494479.png" alt="Facebook"></a>
-            <a href="https://www.twitter.com" target="_blank" class="icono-twitter"><img src="Imagenes/twitter_2504839.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com" target="_blank" class="icono-instagram"><img src="Imagenes/instagram_4494488.png" alt="Instagram"></a>
-        </div>
-        <p>Derechos Reservados @2024</p>
-    </footer>
 </body>
 </html>

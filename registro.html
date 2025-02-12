@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-card">
+            <div class="register-header">
+                <h2>Registrarse</h2>
+            </div>
+            
+            <form onsubmit="registrar(event)">
+                <div class="form-group">
+                    <label for="register-nombre">Nombre</label>
+                    <input 
+                        type="text" 
+                        id="register-nombre" 
+                        placeholder="Tu nombre completo"
+                        autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">Correo electrónico</label>
+                    <input 
+                        type="email" 
+                        id="register-email" 
+                        placeholder="tucorreo@ejemplo.com"
+                        autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="register-password" 
+                        placeholder="Crea una contraseña segura"
+                        autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="register-button">Registrarse</button>
+
+                <div class="terms">
+                    Al registrarte, aceptas nuestros 
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+
+                <div class="login-link">
+                    ¿Ya tienes una cuenta? <a href="contacto.html">Inicia sesión aquí</a>
+                </div>
+
+                <div id="mensaje"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        async function registrar(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById("register-nombre").value;
+            const email = document.getElementById("register-email").value;
+            const password = document.getElementById("register-password").value;
+            const mensajeDiv = document.getElementById("mensaje");
+
+            if (!nombre || !email || !password) {
+                mensajeDiv.className = "error";
+                mensajeDiv.innerText = "Por favor, completa todos los campos";
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:5000/api/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ nombre, email, password }),
+                });
+
+                const data = await response.json();
+                
+                if (!data.error) {
+                    mensajeDiv.className = "success";
+                    mensajeDiv.innerText = data.message || "Registro exitoso";
+                    
+                    setTimeout(() => {
+                        window.location.href = "contacto.html";
+                    }, 1000);
+                } else {
+                    mensajeDiv.className = "error";
+                    mensajeDiv.innerText = "Error: " + data.error;
+                }
+            } catch (error) {
+                mensajeDiv.className = "error";
+                mensajeDiv.innerText = "Error de conexión: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
